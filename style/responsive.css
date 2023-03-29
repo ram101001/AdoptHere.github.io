@@ -1,0 +1,114 @@
+/*
+  Media queries 810px or less.
+  
+  1. General styles
+  2. Header
+  3. Burger menu
+  4. Adoption section
+  5. Footer
+*/
+
+
+/* 810px */
+@media (max-width: 50.625em) {
+  /* 2. Header */
+
+  .nav__links {
+    position: absolute;
+    top: 55px;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: var(--clr-black);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    visibility: hidden; /* Hidden by default, changes when user clicks on the burger menu. */
+    transition: all 300ms ease-in-out;
+  }
+
+  .nav__links > * + * {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  .nav__link {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  /* 3. Burger menu */
+
+  .burger-menu { display: block; }
+
+  .burger-menu > label {
+    cursor: pointer;
+    transition: opacity 250ms ease-in;
+  }
+
+  .burger-menu > label:hover { opacity: .5; }
+
+  .burger-menu > label > .close { display: none; }
+
+  #check-menu:checked ~ .burger-menu > label > .close { display: inline; }
+  #check-menu:checked ~ .burger-menu > label > .burger { display: none; }
+  
+  #check-menu:checked ~ .nav__links {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+
+  /* 4. Adoption section */
+
+  .adoption {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* 750px */
+@media (max-width: 46.875em) {
+  /* 5. Footer */
+
+  .footer__text { width: 100%; }
+
+  .footer__social-medias::before { right: calc(90% / 2); }
+}
+
+/* 450px */
+@media (max-width: 28.125em) {
+  /* 1. General styles */
+  
+  .logo { font-size: 1.75rem; }
+
+  .title { font-size: 3.75rem; /* 60px */ }
+
+
+  /* 5. Footer */
+
+  .footer__wrapper-content { padding: 40px; }
+
+  .footer__social-medias { font-size: 1.875rem; /* 30px */ }
+
+  .footer__social-medias::before { right: calc(82% / 2); }
+
+  .footer__text { font-size: 1rem; /* 16px */ }
+
+  .footer__copyright > .footer__text { font-size: .875rem; /* 14px */ }
+}
+
+/* 360px */
+@media (max-width: 22.5em) {
+  /* 5. Footer */
+
+  .footer__wrapper-content { padding: 40px; }
+
+  .footer__social-medias { font-size: 1.5625rem; /* 25px */ }
+
+  .footer__social-medias::before { display: none; }
+
+  .footer__text { font-size: .875rem; /* 14px */ }
+
+  .footer__copyright > .footer__text { font-size: .75rem; /* 12px */ }
+}
