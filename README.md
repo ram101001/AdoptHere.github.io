@@ -12,4 +12,4 @@ Added the stylesheet and the pet images and the logo of website.
 
 
 #Author: Ramjee Rai
-- This project is solely made and tested by the author, it was developed in order to satisfy t e golden project 1 requirement of @codeclause: Pet Adoption Portal.
+- This project is solely made and tested by the author, it was developed in order to satisfy the golden project 1 requirement of @codeclause: Pet Adoption Portal.
